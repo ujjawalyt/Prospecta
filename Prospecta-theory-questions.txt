@@ -1,0 +1,46 @@
+When Creating or consuming an ApI  there are several key things we should consider to ensure it secure and reliable:
+
+1.Input validation :  Validate all user input to prevent injection attacks.
+2. Authentication and Authorisation :  Using strong Authentication and Authorisation, this ensures the person  with right authority can access resources.
+3. Error Handling : Implement proper error handling to provide clear and concise error messages to users. 
+4. Limiting the per user request in a day or any time span.
+5.Documentation: Provide clear and concise documentation for the API, including information about authentication, input validation, error handling.
+
+Theoretical Challenge
+
+Question 1. How Will You Tackle the challenge above?
+
+Answer 1. first and formost challenge for me is to read a csv file so for that i have followed certain steps.
+1.I would write a program that reads in the CSV file and parses each cell
+2. I have put the data into the excel sheet and save that file with the .csv extension.
+
+3. while solving this problem first things that comes in my mind is that the given data how i can encounter this data into our java applicaton.then i though of Hashmap to put all the data into it and get the required answer.
+The given data in the comman(,) seperated data.
+
+4. Using buffer Reader i have tried to read the file which is under the root folder src in the application.
+using an HashMap we can easily convert our data into the desired result.
+
+here key is the alphabetical value and and "value" is the numerical numbers
+for ex:- A1 - key
+         5  - value
+         =4+5 - treat as value
+
+2.What type of errors you would you check for ?
+Some errors that I would check for
+Syntax errors in formulas 
+e.g., missing or mismatched parentheses
+
+Wrong cell references as per CSV file: 
+e.g.  A5 or D1 for the given case is invalid cell reference 
+
+Circular references  : When like A1 = B1 and  B1 = A1 , both referring to each other
+File Size
+Missing data 
+
+3. How might a user break your code?
+There are Following ways user can break our code :
+By using unsupported functions or formulas
+By using incorrect cell references in formulas
+By inputting invalid CSV format : not separating with commas properly
+By using providing invalid data types  :non-numeric values in cells that are expected to contain numbers
+
